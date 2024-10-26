@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <p id="weather">Current weather: </p>
+    <script>
+        fetch("weather.txt")
+        .then(res => res.text())
+        .then(weather => {
+            const text = document.createTextNode(weather);
+            document.getElementById("weather").appendChild(text);
+        });
+    </script>
+</html>
